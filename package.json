@@ -1,0 +1,16 @@
+{
+  "name": "supabase-express-auth",
+  "version": "1.0.0",
+  "description": "Express.js API with Supabase Auth",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
