@@ -29,6 +29,10 @@
                   "password": {
                     "type": "string",
                     "example": "password123"
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "John Doe"
                   }
                 }
               }

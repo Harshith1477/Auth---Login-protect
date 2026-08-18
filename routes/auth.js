@@ -5,13 +5,21 @@ const authGuard = require('../middleware/authGuard');
 
 // POST /auth/signup
 router.post('/signup', async (req, res) => {
-  const { email, password } = req.body || {};
+  const { email, password, name } = req.body || {};
 
   if (!email || !password) {
     return res.status(400).json({ error: 'Bad Request' });
   }
 
-  const { data, error } = await supabase.auth.signUp({ email, password });
+  const { data, error } = await supabase.auth.signUp({ 
+    email, 
+    password,
+    options: {
+      data: {
+        name
+      }
+    }
+  });
 
   if (error) {
     return res.status(400).json({ error: error.message });
